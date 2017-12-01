@@ -1,7 +1,7 @@
 var news = []
 
 module.exports = function delfi(callback, interval) {
-    interval = interval || 60000
+    interval = interval || 120000
     callback = callback || console.log
 
     var request = require("request"),
