@@ -20,8 +20,9 @@ Simple announcer for Estonian news portal delfi.ee. If top headline changes, the
 -------
 **delfi(callback, interval)**
 
-**callback** - Callback function which returns either error or data (error-first callback).
-**interval** - Time between requests, in milliseconds. If not provided then default interval is set to 120000 ms (120 seconds)
+**callback** - callback function which returns either error or data (error-first callback).
+
+**interval** - time between requests, in milliseconds. If not provided then default interval is set to 120000 ms (120 seconds)
 
 
 
