@@ -1,6 +1,6 @@
 {
   "name": "delfi-newscaster",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Real-time news scraper for delfi.ee",
   "main": "index.js",
   "scripts": {
