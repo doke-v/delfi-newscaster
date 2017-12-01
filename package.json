@@ -9,6 +9,10 @@
   "keywords": [
     "news"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuhnik/delfi-newscaster.git"
+},
   "author": "tuhnik",
   "license": "ISC",
   "dependencies": {
