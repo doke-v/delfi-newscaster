@@ -1,0 +1,18 @@
+{
+  "name": "delfi-newscaster",
+  "version": "1.0.0",
+  "description": "real-time news scraper for delfi.ee",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "news"
+  ],
+  "author": "tuhnik",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.83.0"
+  }
+}
