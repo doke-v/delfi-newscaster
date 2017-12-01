@@ -1,7 +1,7 @@
 {
   "name": "delfi-newscaster",
-  "version": "1.0.0",
-  "description": "real-time news scraper for delfi.ee",
+  "version": "1.0.4",
+  "description": "Real-time news scraper for delfi.ee",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

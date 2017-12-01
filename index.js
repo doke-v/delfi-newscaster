@@ -1,6 +1,9 @@
 var news = []
 
-module.exports = function (callback) {
+module.exports = function delfi(callback, interval) {
+    interval = interval || 60000
+    callback = callback || console.log
+
     var request = require("request"),
         cheerio = require("cheerio"),
         url = "http://m.delfi.ee";
@@ -13,32 +16,38 @@ module.exports = function (callback) {
 
         var headline = $("div.md-mosaic-title .md-scrollpos").eq(0).html();
         var comments = $("div.md-mosaic-title .commentCount").eq(0).html();
-        var link = $("div.md-mosaic-title .md-scrollpos").eq(0).attr('href');
+        var url = $("div.md-mosaic-title .md-scrollpos").eq(0).attr('href');
        
-            link = link.replace('http://m.', 'http://');
+            url = url.replace('http://m.', 'http://');
 
             var uudis = {
                 headline: headline,
-                link: link,
+                url: url,
                 comments: comments
             }
 
             while (news.length > 10) {
                 news.shift()
             }
-            if (news.length < 1) news.push(link)
+            if (news.length < 1) news.push(url)
 
-            if (news.indexOf(link) >= 0) {
+            if (news.indexOf(url) >= 0) {
                 return;
             } else {
-                news.push(link)
+                news.push(url)
                 callback(null, uudis)
             }
        
      }  
      else {
-         callback(error)
+         callback(error, null)
      }
 
     })
+    
+    setTimeout(function(){
+        delfi(callback, interval)
+    }, interval)
+   
+    
 }
