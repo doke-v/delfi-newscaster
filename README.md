@@ -10,11 +10,11 @@ Simple announcer for Estonian news portal [delfi.ee](http://www.delfi.ee). If to
 **Usage example**
 ---------
 ```javascript
-    const delfi = require("delfi-newscaster")
+const delfi = require("delfi-newscaster")
     
-    delfi(function(err, data) {
-    console.log(data.headline) // =>  Kohtuotsus võib sundida sadu kliente hanitanud Swedbanki vastutama
-    })
+delfi(function(err, data) {
+console.log(data.headline) // =>  Kohtuotsus võib sundida sadu kliente hanitanud Swedbanki vastutama
+})
 ```    
 
 
@@ -23,16 +23,16 @@ Simple announcer for Estonian news portal [delfi.ee](http://www.delfi.ee). If to
 ```javascript
 delfi(callback, interval)
 ``` 
-**callback**
-*Required*
+**callback**  
+*Required*  
 Type: `function`  
 
 Callback function which returns either error or data (error-first callback)
 
 
 
-**interval**
-*Optional*
+**interval**  
+*Optional*  
 Type: `number`
 
 Time between requests, in milliseconds. If not provided then default interval is set to 120000 ms (120 seconds)
